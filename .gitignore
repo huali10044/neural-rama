@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# ML Models
+*.h5
+*.pb
+*.ckpt
+checkpoints/
+saved_models/
+
+# Data
+data/raw/
+data/processed/
+data/synthetic
+# *.csv
+# *.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# AI assistant local settings (contains personal machine paths)
+.claude/
+
+# Internal design/progress docs (not for public release)
+docs/
+
+# General hygiene
+*.egg-info/
+.env
+dist/
+build/

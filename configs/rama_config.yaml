@@ -1,0 +1,35 @@
+# RAMA Configuration
+
+rama:
+  reinforcement_factor: 0.5
+  attenuation_factor: 0.0
+  
+scoring:
+  distance_limit_meters: 8000  # ~5 miles
+  review_count_limit: 100
+  
+  distance_weight: 0.6
+  rating_weight: 0.3
+  review_weight: 0.1
+
+weighting_schemes:
+  RUN1:  # Specific interest priority
+    general: 0.09
+    specific: 0.9
+    context: 0.01
+  
+  RUN2:  # General interest priority
+    general: 0.9
+    specific: 0.09
+    context: 0.01
+
+data:
+  num_synthetic_users: 30
+  num_examples_per_user: 80
+  seed: 42
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  num_epochs: 100
+  validation_split: 0.2

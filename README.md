@@ -33,8 +33,6 @@ neural-rama/
 ├── run_demo.py                           # End-to-end classical RAMA demo (RUN1 vs RUN2)
 ├── requirements.txt                      # Python dependencies
 ├── README.md                             # This file
-├── README-TF.md                          # TensorFlow-specific implementation notes (moved to docs/)
-├── project progress What You Have Now.md # Progress tracker
 │
 ├── src/
 │   ├── data/
@@ -70,12 +68,10 @@ neural-rama/
 │   └── rama_config.yaml                  # RAMA hyperparameters and weighting schemes
 │
 ├── data/                                 # Generated synthetic data (git-ignored)
-├── notebooks/                            # Analysis notebooks
-├── docs/
-│   ├── Step-by-Step Plan...md            # Full 9-phase implementation plan
-│   └── project_structure.md             # Architecture documentation
-└── tools/                                # Miscellaneous development tools
+└── notebooks/                            # Analysis notebooks
 ```
+
+Internal design notes, progress reports, and planning docs live in `docs/` locally but are not committed to this repo (see `.gitignore`).
 
 ## Quick Start
 
