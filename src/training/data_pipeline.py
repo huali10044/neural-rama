@@ -308,16 +308,41 @@ class RAMADataPipeline:
             if not positive_indices:
                 continue
 
+            # Determine the categories the user has rated positively, so
+            # positive/negative candidates can be sampled in a way that
+            # actually reflects the user's preferences (rather than being
+            # drawn uniformly at random, which carries no learning signal).
+            liked_cat_ids = set()
+            for i in positive_indices:
+                for cid in user.category_ids[i]:
+                    if cid >= 2:  # skip <PAD>=0 and <UNK>=1
+                        liked_cat_ids.add(cid)
+
+            pos_pool = [
+                c for c in self.all_candidates
+                if any(cid in liked_cat_ids for cid in c.category_ids if cid >= 2)
+            ]
+            neg_pool = [
+                c for c in self.all_candidates
+                if not any(cid in liked_cat_ids for cid in c.category_ids if cid >= 2)
+            ]
+            # Fall back to the full pool if either side is empty (e.g. no
+            # candidate happens to share a liked category)
+            if not pos_pool:
+                pos_pool = self.all_candidates
+            if not neg_pool:
+                neg_pool = self.all_candidates
+
             for pos_idx in positive_indices:
-                # Use a random candidate as "positive" approximation
-                # (aligned with user's liked categories)
-                pos_cand = rng.choice(self.all_candidates)
+                # Positive candidate: shares a category the user likes
+                pos_cand = rng.choice(pos_pool)
 
                 for _ in range(num_negatives):
-                    neg_cand = rng.choice(self.all_candidates)
+                    # Negative candidate: does not share a liked category
+                    neg_cand = rng.choice(neg_pool)
                     # Ensure different candidate
                     while neg_cand.candidate_id == pos_cand.candidate_id:
-                        neg_cand = rng.choice(self.all_candidates)
+                        neg_cand = rng.choice(neg_pool)
 
                     triples.append({
                         # User features
