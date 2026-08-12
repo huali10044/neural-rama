@@ -6,7 +6,14 @@ Provides recommendation quality metrics from TREC 2014:
   - Mean Reciprocal Rank (MRR target: 0.71)
   - Time-Biased Gain (TBG target: 0.70)
 
+Note: time_biased_gain() returns a raw, unnormalized sum by default (this
+is NOT on the paper's [0,1] scale). Pass normalize=True, or read
+'tbg_normalized' from evaluate_ranking()/evaluate_all_users(), for a
+bounded score comparable to the paper's 0.70 target. See
+time_biased_gain()'s docstring for details on the normalization used.
+
 Phase 4 — Training Infrastructure
+Phase 5 — Added normalized TBG
 
 TensorFlow Version: 2.15+
 """
@@ -70,11 +77,30 @@ def mean_reciprocal_rank(
     return 0.0
 
 
+def _raw_tbg(
+    ranked_relevance: np.ndarray,
+    half_life: float = 224.0,
+) -> float:
+    """
+    Unnormalized Time-Biased Gain for a sequence of gains already sorted
+    into rank order (rank 0 = top of the list).
+
+    TBG = sum_k gain(k) * decay(k), decay(k) = 2^(-T(k) / half_life),
+    with unit time per item so T(k) = k (0-indexed).
+    """
+    if len(ranked_relevance) == 0:
+        return 0.0
+    ranks = np.arange(len(ranked_relevance))
+    decay = 2.0 ** (-ranks / half_life)
+    return float(np.sum(ranked_relevance * decay))
+
+
 def time_biased_gain(
     predicted_scores: np.ndarray,
     ground_truth: np.ndarray,
     threshold: float = 0.0,
     half_life: float = 224.0,
+    normalize: bool = False,
 ) -> float:
     """
     Time-Biased Gain (TBG): models the probability that a user reaches
@@ -86,28 +112,50 @@ def time_biased_gain(
 
     Simplified: assume unit time per item → T(k) = k
 
+    Note on scale: the raw (unnormalized) sum above grows with the number
+    of relevant candidates and is NOT on the same [0,1] scale as the TBG
+    values reported in the RAMA/TREC 2014 paper (e.g. target ~0.70). To get
+    a comparable, bounded score, set normalize=True, which divides the raw
+    TBG by the TBG of the *ideal* ranking (ground truth sorted descending)
+    — the same nDCG-style normalization used for normalized DCG (raw DCG /
+    ideal DCG). This is our own interpretation for making the metric
+    interpretable on a bounded scale; it is not a reproduction of the
+    original TREC contextual-suggestion TBG formula, which was not
+    available to verify directly.
+
     Args:
         predicted_scores: (num_candidates,) — model scores
         ground_truth:     (num_candidates,) — relevance values
         threshold: Relevance threshold for binary gain
         half_life: Half-life parameter controlling patience decay (default 224s from TREC)
+        normalize: If True, return raw_tbg / ideal_tbg, bounded in [0, 1].
+                   If False (default), return the raw unnormalized sum
+                   (preserves prior behavior).
 
     Returns:
-        TBG score as a float
+        TBG score as a float. Unbounded (raw) unless normalize=True.
     """
     if len(predicted_scores) == 0:
         return 0.0
 
+    gains = (ground_truth > threshold).astype(float)
+
     ranked_indices = np.argsort(predicted_scores)[::-1]
-    tbg = 0.0
+    predicted_gains = gains[ranked_indices]
+    raw_tbg = _raw_tbg(predicted_gains, half_life=half_life)
 
-    for rank, idx in enumerate(ranked_indices):
-        gain = 1.0 if ground_truth[idx] > threshold else 0.0
-        # decay = 2^(-T(k) / half_life), T(k) = rank (0-indexed)
-        decay = 2.0 ** (-rank / half_life)
-        tbg += gain * decay
+    if not normalize:
+        return raw_tbg
 
-    return tbg
+    # Ideal ranking: sort ground truth gains descending (best possible order)
+    ideal_gains = np.sort(gains)[::-1]
+    ideal_tbg = _raw_tbg(ideal_gains, half_life=half_life)
+
+    if ideal_tbg == 0.0:
+        # No relevant items at all — nothing to normalize against.
+        return 0.0
+
+    return raw_tbg / ideal_tbg
 
 
 def evaluate_ranking(
@@ -126,12 +174,17 @@ def evaluate_ranking(
         threshold: Relevance threshold
 
     Returns:
-        Dict with 'p_at_k', 'mrr', 'tbg'
+        Dict with 'p_at_k', 'mrr', 'tbg' (raw, unnormalized — see
+        time_biased_gain() docstring), and 'tbg_normalized' (bounded [0,1],
+        nDCG-style normalization against the ideal ranking).
     """
     return {
         "p_at_k": precision_at_k(predicted_scores, ground_truth, k, threshold),
         "mrr": mean_reciprocal_rank(predicted_scores, ground_truth, threshold),
         "tbg": time_biased_gain(predicted_scores, ground_truth, threshold),
+        "tbg_normalized": time_biased_gain(
+            predicted_scores, ground_truth, threshold, normalize=True
+        ),
     }
 
 
@@ -151,7 +204,7 @@ def evaluate_all_users(
         threshold: Relevance threshold
 
     Returns:
-        Dict with mean 'p_at_k', 'mrr', 'tbg'
+        Dict with mean 'p_at_k', 'mrr', 'tbg', 'tbg_normalized'
     """
     metrics = [
         evaluate_ranking(pred, gt, k, threshold)
@@ -161,4 +214,5 @@ def evaluate_all_users(
         "p_at_k": float(np.mean([m["p_at_k"] for m in metrics])),
         "mrr": float(np.mean([m["mrr"] for m in metrics])),
         "tbg": float(np.mean([m["tbg"] for m in metrics])),
+        "tbg_normalized": float(np.mean([m["tbg_normalized"] for m in metrics])),
     }
