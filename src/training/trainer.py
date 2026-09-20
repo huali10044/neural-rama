@@ -215,6 +215,7 @@ class RAMATrainer:
         all_p_at_k = []
         all_mrr = []
         all_tbg = []
+        all_tbg_norm = []
 
         for user in users:
             n_items = len(user.rating_weights)
@@ -290,11 +291,13 @@ class RAMATrainer:
                 all_p_at_k.append(metrics["p_at_k"])
                 all_mrr.append(metrics["mrr"])
                 all_tbg.append(metrics["tbg"])
+                all_tbg_norm.append(metrics["tbg_normalized"])
 
         return {
             "p_at_k": float(np.mean(all_p_at_k)) if all_p_at_k else 0.0,
             "mrr": float(np.mean(all_mrr)) if all_mrr else 0.0,
             "tbg": float(np.mean(all_tbg)) if all_tbg else 0.0,
+            "tbg_normalized": float(np.mean(all_tbg_norm)) if all_tbg_norm else 0.0,
         }
 
     # ------------------------------------------------------------------

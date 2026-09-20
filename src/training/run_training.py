@@ -164,11 +164,17 @@ def main():
     print("\n" + "=" * 70)
     print("TREC 2014 Target Comparison (validation users)")
     print("=" * 70)
-    targets = {"p_at_k": ("P@5", 0.50), "mrr": ("MRR", 0.71), "tbg": ("TBG", 0.70)}
+    targets = {
+        "p_at_k": ("P@5", 0.50),
+        "mrr": ("MRR", 0.71),
+        "tbg_normalized": ("TBG (normalized)", 0.70),
+    }
     for key, (label, target) in targets.items():
         value = ranking_metrics.get(key, 0.0)
         status = "PASS" if value >= target else "below target"
-        print(f"  {label:5s}: {value:.4f}  (target >= {target:.2f})  [{status}]")
+        print(f"  {label:18s}: {value:.4f}  (target >= {target:.2f})  [{status}]")
+    print(f"  {'TBG (raw)':18s}: {ranking_metrics.get('tbg', 0.0):.4f}  "
+          f"(unnormalized, not comparable to a fixed target — see metrics.py docstring)")
     print("=" * 70)
 
     return ranking_metrics

@@ -1,0 +1,5 @@
+tensorflow==2.19.1
+tf_keras==2.19.0
+numpy==1.26.4
+sentence-transformers==5.2.2
+pytest==7.4.3
