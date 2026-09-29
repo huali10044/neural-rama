@@ -1,0 +1,7 @@
+.venv/
+data/examples2014.csv
+data/profiles2014-*.csv
+__pycache__/
+.pytest_cache/
+results_crosscheck/
+results/pairs_seed*.npz

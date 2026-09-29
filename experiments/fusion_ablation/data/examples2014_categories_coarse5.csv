@@ -1,0 +1,101 @@
+example_id,title,city,categories,confidence,rationale
+101,Millennium Park,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+102,Topolobampo/Frontera Grill,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+103,Alinea,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+104,Willis Tower,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+105,Billy Goat Tavern,"Chicago, IL",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+106,Hot Doug's,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+107,Little Goat,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+108,Art Institute of Chicago,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+109,Longman & Eagle,"Chicago, IL",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+110,Navy Pier,"Chicago, IL",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+111,Sweet Maple Cafe,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+112,Hoosier Mama Pie Company,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+113,Logan Hardware,"Chicago, IL",activities|shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+114,Hopleaf,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+115,Signature Lounge,"Chicago, IL",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+116,John Hancock Center,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+117,Ruxbin,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+118,Hideout,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+119,Lou Mitchell's,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+120,Andy's Thai Kitchen,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+121,Crisp,"Chicago, IL",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+122,Green Mill,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+123,Old Town Ale House,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+124,Buddy Guy's Legends,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+125,Adler Planetarium & Astronomy Museum,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+126,Metro,"Chicago, IL",activities|nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+127,Clark Street Ale House,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+128,Shedd Aquarium,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+129,Field Museum of Natural History,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+130,Humboldt Park,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+131,Lincoln Park Zoo,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+132,Willie Dixon's Blues Heaven,"Chicago, IL",attraction|nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+133,Chicago Cultural Center,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+134,Graceland Cemetery,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+135,River North Galleries,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+136,Holy Name Cathedral,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+137,National Museum of Mexican Art,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+138,Merchandise Mart,"Chicago, IL",attraction|shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+139,Museum of Science & Industry,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+140,Steppenwolf Theatre,"Chicago, IL",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+141,Garfield Park Conservatory,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+142,Chicago White Sox,"Chicago, IL",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+143,Chicago Theatre,"Chicago, IL",activities|attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+144,Moody Church,"Chicago, IL",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+145,Kuma’s Corner,"Chicago, IL",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+146,Chicago Cubs,"Chicago, IL",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+147,Magnificent Mile,"Chicago, IL",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+148,Neo,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+149,Rory Lake’s Karaoke Dreams,"Chicago, IL",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+150,Santa Fe Opera,"Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+151,Georgia O'Keeffe Museum,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+152,Santa Fe Indian Market,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+153,Cafe Pasqual's,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+154,Coyote Café,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+155,San Marcos Café,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+156,El Farol,"Santa Fe, NM",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+157,New Wave Rafting Co,"Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+158,Ski Santa Fe,"Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+159,Loretto Chapel,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+160,St Francis Cathedral,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+161,Rancho de las Golondrinas,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+162,Palace of the Governors,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+163,Museum of Fine Arts,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+164,Museum of International Folk Art,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+165,New Mexico Museum of Art,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+166,Morning Star Gallery,"Santa Fe, NM",attraction|shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+167,Santa Fe Southern Railway,"Santa Fe, NM",activities|attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+168,"A Well-Born Guide/Have PhD, Will Travel","Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+169,Compound,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+170,High Desert Angler,"Santa Fe, NM",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+171,SITE Santa Fe,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+172,Shidoni Foundry,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+173,Cowgirl,"Santa Fe, NM",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+174,Santacafé,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+175,Second Street Brewery,"Santa Fe, NM",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+176,Tesuque Village Market,"Santa Fe, NM",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+177,Canyon Rd,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+178,Ristra,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+179,Gerald Peters Gallery,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+180,Nambé Foundry Outlet,"Santa Fe, NM",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+181,Travel Bug,"Santa Fe, NM",restaurant|shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+182,Seret & Sons,"Santa Fe, NM",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+183,Nedra Matteucci Galleries,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+184,Museum of Contemporary Native Arts,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+185,Santa Fe Chamber Music Festival,"Santa Fe, NM",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+186,Jackalope,"Santa Fe, NM",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+187,Santa Fe Baking Company,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+188,Wheelwright Museum of the American Indian,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+189,Santa Fe Clay,"Santa Fe, NM",attraction,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+190,Ten Thousand Waves,"Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+191,Rodeo de Santa Fe,"Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+192,Santa Fe Desert Chorale,"Santa Fe, NM",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+193,Harry's Roadhouse,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+194,Kowboyz,"Santa Fe, NM",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+195,Nathalie,"Santa Fe, NM",shopping,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+196,Tea House,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+197,The Den,"Santa Fe, NM",nightlife,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+198,Del Charro Saloon,"Santa Fe, NM",nightlife|restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+199,Jambo Cafe,"Santa Fe, NM",restaurant,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview
+200,Ballroom Dance Chicago,"Chicago, IL",activities,derived,Collapsed from the 72-category reconstruction into the five categories named in the track overview

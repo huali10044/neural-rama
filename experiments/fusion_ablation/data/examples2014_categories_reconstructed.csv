@@ -1,0 +1,101 @@
+example_id,title,city,categories,confidence,rationale
+101,Millennium Park,"Chicago, IL",parks|landmarks,high,Public park in the Loop; landmark
+102,Topolobampo/Frontera Grill,"Chicago, IL",mexican,high,Refined Mexican cuisine
+103,Alinea,"Chicago, IL",newamerican,high,New American tasting menus
+104,Willis Tower,"Chicago, IL",landmarks,high,"Skyscraper, observation deck"
+105,Billy Goat Tavern,"Chicago, IL",burgers|divebars,high,Classic tavern known for its cheezborger
+106,Hot Doug's,"Chicago, IL",hotdog|hotdogs,medium,Gourmet hot dog counter; 'hotdogs' (Fast Food) as the likely second Yelp label
+107,Little Goat,"Chicago, IL",diners|breakfast_brunch|sandwiches,high,"Upscale diner: breakfast, sandwiches, burgers"
+108,Art Institute of Chicago,"Chicago, IL",museums,high,Encyclopedic art museum
+109,Longman & Eagle,"Chicago, IL",gastropubs|newamerican,high,Farm-to-table gastropub
+110,Navy Pier,"Chicago, IL",amusementparks,verified,Unique solution from inverting user 814's published model: amusementparks alone (k=1). Not landmarks
+111,Sweet Maple Cafe,"Chicago, IL",breakfast_brunch|southern,medium,"Country-style comfort food, all-day breakfast"
+112,Hoosier Mama Pie Company,"Chicago, IL",desserts|bakeries,high,Pie shop
+113,Logan Hardware,"Chicago, IL",vinyl_records|arcades|musicvideo,high,Record store with vintage arcade games
+114,Hopleaf,"Chicago, IL",pubs|bars,medium,"Belgian beer hall; 'belgian' is not among the 72, so filed under bars/pubs in 2014"
+115,Signature Lounge,"Chicago, IL",lounges|newamerican,medium,Lounge atop the Hancock Center with American fare
+116,John Hancock Center,"Chicago, IL",landmarks,high,Skyscraper
+117,Ruxbin,"Chicago, IL",newamerican,medium,"Creative modern cuisine, global influences"
+118,Hideout,"Chicago, IL",musicvenues|bars,high,Bar hosting live music
+119,Lou Mitchell's,"Chicago, IL",diners|breakfast_brunch,high,Iconic breakfast diner since 1923
+120,Andy's Thai Kitchen,"Chicago, IL",thai,high,Thai restaurant
+121,Crisp,"Chicago, IL",korean|chicken_wings,high,Korean fried chicken counter
+122,Green Mill,"Chicago, IL",jazzandblues|lounges,high,Jazz cocktail lounge
+123,Old Town Ale House,"Chicago, IL",divebars,high,Described as a dive bar
+124,Buddy Guy's Legends,"Chicago, IL",jazzandblues|musicvenues,high,Blues club
+125,Adler Planetarium & Astronomy Museum,"Chicago, IL",museums,high,Planetarium and astronomy museum
+126,Metro,"Chicago, IL",musicvenues|venues,high,Concert hall
+127,Clark Street Ale House,"Chicago, IL",pubs|bars|wineries,verified,"User 814 inversion: wineries (-1/12) can only sit on a 3-label example rated 1; Rodeo is excluded, leaving this one. Semantically odd: suggests the 2014 Yelp lookup matched a different business"
+128,Shedd Aquarium,"Chicago, IL",aquariums,verified,Unique solution from user 814 inversion (k=1)
+129,Field Museum of Natural History,"Chicago, IL",museums,high,Natural history museum
+130,Humboldt Park,"Chicago, IL",parks,high,Park and community area
+131,Lincoln Park Zoo,"Chicago, IL",zoos,verified,Unique solution from user 814 inversion (k=1)
+132,Willie Dixon's Blues Heaven,"Chicago, IL",museums|jazzandblues,medium,Blues heritage foundation in Chess Records building
+133,Chicago Cultural Center,"Chicago, IL",culturalcenter,verified,Unique solution from user 814 inversion: culturalcenter alone (k=1)
+134,Graceland Cemetery,"Chicago, IL",funeralservices|landmarks,high,Victorian cemetery; only example that can carry funeralservices
+135,River North Galleries,"Chicago, IL",galleries,high,Gallery association / district
+136,Holy Name Cathedral,"Chicago, IL",churches|landmarks,high,Catholic cathedral
+137,National Museum of Mexican Art,"Chicago, IL",museums,high,Art museum
+138,Merchandise Mart,"Chicago, IL",shoppingcenters|landmarks,high,Historic commercial building
+139,Museum of Science & Industry,"Chicago, IL",museums,high,Science museum
+140,Steppenwolf Theatre,"Chicago, IL",theater,high,Theatre company
+141,Garfield Park Conservatory,"Chicago, IL",gardens,high,Conservatory
+142,Chicago White Sox,"Chicago, IL",sportsteams,medium,"User 814 inversion: of the two MLB teams, one carried one label and the other two"
+143,Chicago Theatre,"Chicago, IL",theater|movietheaters|landmarks,low,"Historic former movie palace; 'movietheaters' is a plausible 2014 Yelp label, unconfirmed"
+144,Moody Church,"Chicago, IL",churches,high,Protestant church
+145,Kuma’s Corner,"Chicago, IL",burgers|bars,high,Burger pub
+146,Chicago Cubs,"Chicago, IL",sportsteams|stadiumsarenas,medium,User 814 inversion requires one team at k=2; Wrigley Field makes the Cubs the likelier carrier of stadiumsarenas
+147,Magnificent Mile,"Chicago, IL",shoppingcenters,verified,User 814 inversion: shoppingcenters with k=1 in every consistent solution
+148,Neo,"Chicago, IL",danceclubs,high,Dance club
+149,Rory Lake’s Karaoke Dreams,"Chicago, IL",karaoke,verified,Unique solution from user 814 inversion (k=1)
+150,Santa Fe Opera,"Santa Fe, NM",theater|venues,high,Opera house
+151,Georgia O'Keeffe Museum,"Santa Fe, NM",museums,high,Art museum
+152,Santa Fe Indian Market,"Santa Fe, NM",localflavor|galleries,medium,Annual Native American arts market
+153,Cafe Pasqual's,"Santa Fe, NM",breakfast_brunch|mexican,medium,"Organic regional cooking, known for breakfast"
+154,Coyote Café,"Santa Fe, NM",newamerican,medium,Southwestern fine dining; 'southwestern' not among the 72
+155,San Marcos Café,"Santa Fe, NM",cafes|breakfast_brunch,medium,Cafe in a feed store
+156,El Farol,"Santa Fe, NM",bars|musicvenues|restaurants,low,"Tapas bar with flamenco; 'spanish'/'tapas' not among the 72, so the 2014 labels were likely generic"
+157,New Wave Rafting Co,"Santa Fe, NM",rafting,verified,"Unique solution from user 814 inversion: rafting alone (k=1), not tours"
+158,Ski Santa Fe,"Santa Fe, NM",skiresorts,verified,Unique solution from user 814 inversion (k=1)
+159,Loretto Chapel,"Santa Fe, NM",churches|landmarks|museums,high,"Former chapel, now museum"
+160,St Francis Cathedral,"Santa Fe, NM",churches|landmarks,high,Cathedral basilica
+161,Rancho de las Golondrinas,"Santa Fe, NM",museums,high,Living-history museum
+162,Palace of the Governors,"Santa Fe, NM",museums|landmarks,high,"Historic adobe palace, museum"
+163,Museum of Fine Arts,"Santa Fe, NM",museums,high,Art museum
+164,Museum of International Folk Art,"Santa Fe, NM",museums,high,Folk art museum
+165,New Mexico Museum of Art,"Santa Fe, NM",museums,high,Art museum
+166,Morning Star Gallery,"Santa Fe, NM",galleries|antiques,high,Antique and modern Native American art gallery
+167,Santa Fe Southern Railway,"Santa Fe, NM",tours|localflavor,medium,"Excursion railroad. tours alone (k=1) would place tours above the Table 1 cutoff for user 814, so a second label is required"
+168,"A Well-Born Guide/Have PhD, Will Travel","Santa Fe, NM",tours,high,Guided tours
+169,Compound,"Santa Fe, NM",newamerican,medium,Fine Southwestern dining
+170,High Desert Angler,"Santa Fe, NM",outdoorgear,high,Fly fishing shop and guide service
+171,SITE Santa Fe,"Santa Fe, NM",galleries|museums,medium,Contemporary arts organization
+172,Shidoni Foundry,"Santa Fe, NM",galleries|gardens,medium,Gallery with sculpture gardens and foundry
+173,Cowgirl,"Santa Fe, NM",tradamerican|bars,medium,American comfort food and live music
+174,Santacafé,"Santa Fe, NM",newamerican,medium,American cuisine with southwestern flair
+175,Second Street Brewery,"Santa Fe, NM",breweries|pubs,high,Brewery with pub food
+176,Tesuque Village Market,"Santa Fe, NM",mexican|cafes|beer_and_wine,low,Cafe and general store with New Mexican fare; bakeries dropped because it would push that category above the Table 1 cutoff
+177,Canyon Rd,"Santa Fe, NM",galleries|localflavor,high,Art gallery district
+178,Ristra,"Santa Fe, NM",french,high,French and New Mexican cuisine
+179,Gerald Peters Gallery,"Santa Fe, NM",galleries,high,Art gallery
+180,Nambé Foundry Outlet,"Santa Fe, NM",outlet_stores|homedecor,high,Housewares outlet
+181,Travel Bug,"Santa Fe, NM",bookstores|coffee,medium,Travel bookstore; had a coffee counter
+182,Seret & Sons,"Santa Fe, NM",antiques|rugs|homedecor,medium,Antique architectural elements
+183,Nedra Matteucci Galleries,"Santa Fe, NM",galleries,high,Art gallery
+184,Museum of Contemporary Native Arts,"Santa Fe, NM",museums|artschools,high,Museum of the Institute of American Indian Arts
+185,Santa Fe Chamber Music Festival,"Santa Fe, NM",musicvenues,medium,Chamber music festival
+186,Jackalope,"Santa Fe, NM",homedecor,medium,Folk art and home furnishings market
+187,Santa Fe Baking Company,"Santa Fe, NM",bakeries|breakfast_brunch|cafes,high,Bakery cafe serving breakfast
+188,Wheelwright Museum of the American Indian,"Santa Fe, NM",museums,high,Museum
+189,Santa Fe Clay,"Santa Fe, NM",artschools,medium,Clay studio with classes and retail supply
+190,Ten Thousand Waves,"Santa Fe, NM",spas|massage,high,Japanese-style spa
+191,Rodeo de Santa Fe,"Santa Fe, NM",horsebackriding,verified,User 814 inversion: horsebackriding weight -0.25 requires k=1 here
+192,Santa Fe Desert Chorale,"Santa Fe, NM",venues,medium,Choral concert organisation
+193,Harry's Roadhouse,"Santa Fe, NM",breakfast_brunch|tradamerican,medium,Roadhouse cafe with brunch
+194,Kowboyz,"Santa Fe, NM",fashion,medium,Used and new western wear
+195,Nathalie,"Santa Fe, NM",womenscloth|fashion|homedecor,medium,High-end western wear and home furnishings
+196,Tea House,"Santa Fe, NM",coffee|cafes|vegetarian,low,Teahouse; vegetarian assigned as the most plausible carrier in the set
+197,The Den,"Santa Fe, NM",lounges|bars,medium,Bar/lounge associated with Coyote Cafe
+198,Del Charro Saloon,"Santa Fe, NM",bars|mexican,medium,Western saloon with Tex-Mex
+199,Jambo Cafe,"Santa Fe, NM",african|caribbean,high,African and Caribbean home cooking
+200,Ballroom Dance Chicago,"Chicago, IL",gyms,low,"Ballroom dance studio; Yelp files dance studios under fitness, and 'gyms' is the nearest in the 72"
