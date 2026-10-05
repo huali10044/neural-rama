@@ -1,0 +1,9 @@
+# Fusion ablation environment. Python 3.12. Pinned to the versions the reported results used.
+#
+# The WordNet corpus is NLTK data, not a pip package, so it cannot be pinned here.
+# rama_core.py downloads it into the active environment on first use (~11 MB).
+# Offline? Run: python -m nltk.downloader -d "$VIRTUAL_ENV/nltk_data" wordnet
+numpy==2.4.4
+scipy==1.17.1
+nltk==3.10.3
+pytest==9.1.1

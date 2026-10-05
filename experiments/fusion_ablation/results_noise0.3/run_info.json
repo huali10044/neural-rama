@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-29T00:20:23",
+  "git_commit": "238c5dd8ea0a50bc84f98b60b233b5e8968b0f8c",
+  "python": "3.12.13",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "nltk": "3.10.3",
+  "users": 299,
+  "seeds": 10,
+  "holdout": 0.3,
+  "categories": "examples2014_categories_reconstructed.csv",
+  "excluded_users": [],
+  "label_noise": 0.3,
+  "fixed_weights": {
+    "fixed-general": 0.9090909090909092,
+    "fixed-specific": 0.09090909090909091
+  }
+}
