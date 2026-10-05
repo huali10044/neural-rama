@@ -1,0 +1,42 @@
+Learned Wg: mean 0.583  sd 0.023  range [0.554, 0.616] over 10 seeds   (2014: RAMARUN2 0.909, RUN1 0.091)
+Unconstrained weights: general u<0 in 0/10 seeds, specific v<0 in 0/10 seeds   (a negative weight means that component hurts ranking; Wg is then on the 0/1 boundary)
+
+NDCG5 per-seed spread:
+  fixed-general   mean 0.7171  sd across seeds 0.0070
+  fixed-specific  mean 0.7087  sd across seeds 0.0068
+  learned         mean 0.7228  sd across seeds 0.0069
+  popularity      mean 0.7994  sd across seeds 0.0031
+  random          mean 0.6333  sd across seeds 0.0078
+
+P5 per-seed spread:
+  fixed-general   mean 0.5620  sd across seeds 0.0110
+  fixed-specific  mean 0.5472  sd across seeds 0.0104
+  learned         mean 0.5670  sd across seeds 0.0081
+  popularity      mean 0.6572  sd across seeds 0.0094
+  random          mean 0.4694  sd across seeds 0.0116
+
+MRR per-seed spread:
+  fixed-general   mean 0.7320  sd across seeds 0.0165
+  fixed-specific  mean 0.7355  sd across seeds 0.0202
+  learned         mean 0.7382  sd across seeds 0.0137
+  popularity      mean 0.8848  sd across seeds 0.0149
+  random          mean 0.6433  sd across seeds 0.0157
+
+
+NDCG5: learned vs fixed (paired by user, Holm across 2 comparisons)
+  vs fixed-general   users 296  non-zero pairs 295  mean diff +0.0055 [95% CI +0.0030, +0.0081]  median +0.0053  p 1.61e-05  Holm p 3.22e-05
+  vs fixed-specific  users 296  non-zero pairs 296  mean diff +0.0143 [95% CI +0.0081, +0.0204]  median +0.0138  p 7.46e-05  Holm p 7.46e-05
+  reference popularity  mean 0.7989   learned - popularity: -0.0766  p 2e-24  learned better for 73/296 users
+  reference random      mean 0.6319   learned - random: +0.0904  p 8.3e-32  learned better for 233/296 users
+
+P5: learned vs fixed (paired by user, Holm across 2 comparisons)
+  vs fixed-general   users 296  non-zero pairs 231  mean diff +0.0048 [95% CI +0.0004, +0.0094]  median +0.0000  p 0.129  Holm p 0.129
+  vs fixed-specific  users 296  non-zero pairs 261  mean diff +0.0198 [95% CI +0.0104, +0.0291]  median +0.0200  p 6.3e-05  Holm p 0.000126
+  reference popularity  mean 0.6542   learned - popularity: -0.0902  p 6.4e-18  learned better for 78/296 users
+  reference random      mean 0.4669   learned - random: +0.0972  p 3.8e-24  learned better for 215/296 users
+
+MRR: learned vs fixed (paired by user, Holm across 2 comparisons)
+  vs fixed-general   users 296  non-zero pairs 205  mean diff +0.0061 [95% CI -0.0008, +0.0132]  median +0.0000  p 0.0706  Holm p 0.141
+  vs fixed-specific  users 296  non-zero pairs 242  mean diff +0.0033 [95% CI -0.0104, +0.0167]  median +0.0000  p 0.26  Holm p 0.26
+  reference popularity  mean 0.8818   learned - popularity: -0.1466  p 4.7e-23  learned better for 63/296 users
+  reference random      mean 0.6401   learned - random: +0.0951  p 1.9e-12  learned better for 193/296 users

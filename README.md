@@ -52,8 +52,9 @@ and would not be.
 
 What *is* reusable are the inputs: 299 crowdsourced assessor profiles, 50 city
 contexts, and 100 example attractions with two 5-point ratings each. That is real
-preference data, which is what the synthetic generator in this repository is
-modelled on.
+preference data. It is what the synthetic generator in this repository is modelled
+on, and the [score-fusion ablation](#score-fusion-ablation) below evaluates against
+it directly.
 
 ## What's Implemented
 
@@ -91,16 +92,51 @@ The unit tests exist to answer that: each one asserts a property the classical
 model guaranteed by construction and the neural version has to preserve by
 training.
 
+## Experiments
+
+### Score-fusion ablation
+
+RAMA scored candidate venues by linearly combining three component scores with weights set by hand for TREC 2014. Would fitting those weights to data have done better? The classical algorithm is reimplemented, validated against the user interest models published in the 2014 paper, and evaluated on a surrogate task built from the track's input data. Conditions differ only in how the general- and specific-interest scores are combined.
+
+- Fitting the mixing weight beats both hand-set 2014 settings on graded ranking quality — consistently, and by a small margin.
+- The gain lies in how the top of the ranking is ordered, not in which items reach it.
+- The interest models carry real signal: every personalized condition ranks well clear of a random baseline, and for a large majority of users.
+- The 2014 preference for general interest over specific interest replicates, descriptively.
+
+The fitted weight's *value* is representation-dependent, and a population-level popularity model outperforms every per-user condition here; both are discussed in the full write-up.
+
+Full write-up — setup, results, sensitivity analysis, and discussion: **[experiments/fusion_ablation/README.md](experiments/fusion_ablation/README.md)**
+
 ## Running It
 
-Python 3.12 is used in CI.
+**Python 3.12 is required.** TensorFlow 2.19 and numpy 1.26 publish no wheels for 3.13 or
+later, so a newer interpreter fails at install with `No matching distribution found`.
+
+Using [uv](https://docs.astral.sh/uv/) (it fetches the interpreter for you):
 
 ```bash
-python -m venv .venv
+uv python install 3.12           # leaves your system Python alone
+uv venv --python 3.12
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+uv pip install -r requirements.txt
+```
+
+Or with the standard library, if you already have Python 3.12:
+
+```bash
+python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+For the test suite, install `requirements-test.txt` instead — it pins the versions CI uses.
+
+```bash
 pytest -q                        # 35 tests
 ```
+
+The score-fusion ablation has its own pinned environment and is run separately; see
+[experiments/fusion_ablation/README.md](experiments/fusion_ablation/README.md).
 
 Run the end-to-end classical demo on generated data:
 
@@ -116,9 +152,11 @@ python src/training/run_training.py --regenerate-data
 
 ## Next
 
-- Ablation on the score-fusion mode: fixed vs learned
 - Comparison against the classical implementation on matched synthetic data —
   the meaningful benchmark here, since both models face identical inputs
+- A collaborative-filtering baseline for the fusion ablation. Its popularity
+  reference is a population prior, not CF; the profile matrix is dense enough
+  (299 users x 70 items) to fit item-kNN or matrix factorization directly
 - Evaluation against a later Contextual Suggestion edition built on the fixed
   corpus, where the judgments are designed to be reusable
 
