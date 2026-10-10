@@ -58,7 +58,7 @@ it directly.
 
 ## What's Implemented
 
-**12 custom Keras layers**
+**Custom Keras layers**
 
 - Category, term, and context embeddings
 - Multi-head attention aggregation **weighted by rating polarity** — attention
